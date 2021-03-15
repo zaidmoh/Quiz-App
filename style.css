@@ -1,0 +1,63 @@
+body{
+    margin: 20px;
+    box-sizing: border-box;
+}
+#main-page{
+    margin: auto;
+    width: 60%;
+    border: 5px solid black;
+    padding:30px;
+    border-radius: 5px;
+    /* //background-color ; */
+}
+#main-heading{
+    text-align: center;
+}
+.card-block{
+    background-color: #e6ffe6;
+}
+
+.removeContent{
+    display: none;
+}
+.showContent{
+    display: block;
+}
+
+.customButton{
+    width: 100px;
+    margin-top: 50px;
+}
+
+.nextButton{
+    float: right;
+}
+.button-set{
+    display: flex;
+    justify-content:space-between;
+}
+
+.result-heading{
+    text-align: center;
+}
+
+.result-button{
+    display: flex;
+    justify-content:space-evenly;
+}
+#right-answer{
+    text-align: center;
+}
+#percentage{
+    text-align: center;
+}
+
+#top-part{
+    display: flex;
+    justify-content: space-between;
+}
+
+.make-child{
+    display: flex;
+    justify-content: space-between;
+}

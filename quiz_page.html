@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Quiz</title>
+  </head>
+  <body onload="actualMain()">
+    <main id="main-page">
+        <h1 id="main-heading">Data Structure Quiz</h1>
+        <hr>
+        <div id="quiz-part">
+          <div id="top-part">
+            <h4>Question <span id="question-no"></span> of <span id="total-ques"></span></h4>
+            <b id="timer"></b>
+          </div>
+          
+          <hr>
+          <p id="question"></p>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" onclick="enableButton()" value=1 name="quiz_question" id="flexRadioDefault1">
+              <label class="form-check-label" id="option1" for="flexRadioDefault1">
+                
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" onclick="enableButton()" value=2 name="quiz_question" id="flexRadioDefault2">
+              <label class="form-check-label" id="option2" for="flexRadioDefault2">
+                
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" onclick="enableButton()" value=3 name="quiz_question" id="flexRadioDefault3">
+              <label class="form-check-label " id="option3" for="flexRadioDefault3">
+                
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" onclick="enableButton()" value=4 name="quiz_question" id="flexRadioDefault4">
+              <label class="form-check-label " id="option4" for="flexRadioDefault4">
+                
+              </label>
+            </div>
+            <div class="button-set">
+              <input type="button" class="btn btn-primary customButton" id="prevButton" onclick="prevQuestion()" value="Previous" />
+              <input type="button" class="btn btn-primary customButton" id="nextButton" onclick="nextQuestion()" value="Next"/>  
+            </div>
+        </div>
+        <div id="result">
+          <h3 class="result-heading">Result:</h3>
+            <p id="right-answer"></p>
+            <h4 id="percentage"></h4>
+            <div class="timespent"></div>
+            <hr>
+            <div class="result-button">
+              <a  class="btn btn-primary" onclick="showAnswers()">Check your Answers</a>
+              <a href="quiz_page.html" class="btn btn-primary">Try Again</a>
+            </div>
+        </div>
+        <div id="show-result">
+          <p id="correct-answer"></p>
+          <h4 id="correct-percent"></h4>
+          <hr>
+        </div>
+        <a href="index.html" class="btn btn-primary" id="return-btn">Return to Home Page</a>
+       </main>
+       
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+  </body>
+
+</html>
