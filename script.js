@@ -104,13 +104,26 @@ var rightAnswer=document.getElementById('right-answer');
 var quizPart=document.getElementById('quiz-part');
 var resultPart=document.getElementById('result');
 var returnBtn=document.getElementById('return-btn');
+var showResult=document.getElementById('show-result');
+var instructionPart=document.getElementById('instruction-part');
 var i=0;
 var total=10;
 var resultArray=[];
 for(k=0;k<10;k++){
     resultArray.push(-1);
 }
+
+function mainMethod(){
+    quizPart.classList.add('removeContent');
+    resultPart.classList.add('removeContent');
+    showResult.classList.add('removeContent');
+    returnBtn.classList.add('removeContent');
+}
+
+
 function actualMain(){
+    quizPart.classList.remove('removeContent');
+    instructionPart.classList.add('removeContent');
     mainFunction();
     startTest(600000);
 }
@@ -119,8 +132,8 @@ function mainFunction(){
         nextBtn.disabled=true;
     else
         nextBtn.disabled=false;
-    returnBtn.classList.add('removeContent');
-    resultPart.classList.add('removeContent');
+    // returnBtn.classList.add('removeContent');
+    // resultPart.classList.add('removeContent');
     showQuestion();
     checkCondition();
 }
@@ -222,12 +235,11 @@ function startTest(distance){
 //Show Result Part
 
 
-var showResult=document.getElementById('show-result');
-
 function showAnswers(){
     quizPart.classList.add('removeContent');
     resultPart.classList.add('removeContent');
     returnBtn.classList.remove('removeContent');
+    showResult.classList.remove('removeContent');
     //let index;
     document.getElementById('correct-answer').innerHTML='Score: '+result+" of "+total;
     document.getElementById('correct-percent').innerHTML=(result/total)*100+"% Correct :";
